@@ -1,0 +1,171 @@
+body {
+    background-image: url("http://i68.tinypic.com/df9eko.jpg");
+    background-repeat: no-repeat;
+    text-align: center;
+    background-size: cover;
+}
+
+.pieChart {
+    background-color: #000000;
+    width: 250px;
+    height: 250px;
+    display: block;
+    border-radius: 50%;
+    margin: auto;
+    position: relative;
+    top: 30px;
+}
+
+#more {
+    color: yellowgreen;
+}
+#less {
+    color: red;
+}
+#more:hover {
+    color: orange;
+}
+#less:hover {
+    color: orange;
+}
+#more:active {
+    color: purple;
+}
+#less:active {
+    color: purple;
+}
+
+.bt1 {
+    height: 50px;
+    width: 50px;
+    font-size: 30px;
+    text-align: center;
+    align-content: center;
+    background-color: transparent;
+    border: none;
+}
+
+.bt2 {
+    height: 40px;
+    width: 80px;
+    font-size: 10px;
+    text-align: center;
+    align-content: center;
+    background-color: darkcyan;
+    position: relative;
+    top: 45px;
+}
+
+.bt2:hover {
+    height: 40px;
+    width: 80px;
+    font-size: 10px;
+    text-align: center;
+    align-content: center;
+    background-color: blueviolet;
+}
+
+.bt2:active {
+    height: 40px;
+    width: 80px;
+    font-size: 10px;
+    text-align: center;
+    align-content: center;
+    background-color: rebeccapurple;
+}
+
+p {
+    color: #A9A9A9;
+    font-size: 50px;
+    text-align: center;
+    align-content: center;
+    background-color: transparent;
+}
+
+.text-primary {
+    color: brown;
+    font-size: 60px;
+    font-weight: bold;
+    font-family: 'Sniglet', cursive;
+}
+
+.invisible {
+    color: transparent;
+}
+
+#display {
+    font-size: 70px;
+    font-weight: normal;
+    font-family: 'Sniglet', cursive;
+    z-index: 9;
+}
+
+#displayback {
+    z-index: -4;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    top: -45px;
+    left: 0;
+    right: 0;
+}
+
+.footer{
+    font-family:'PT Sans',sans-serif;
+    text-align: center;
+    font-size:15px;
+    position: relative;
+    top: 60px;
+}
+a.changecolor:link {
+    text-decoration: none;
+    color: yellow;
+}
+
+a.changecolor:visited {
+    text-decoration: none;
+    color: red;
+}
+
+a.changecolor:hover {
+    text-decoration: underline;
+    color: purple;
+}
+
+a.changecolor:active {
+    text-decoration: none;
+    color: blue;
+}
+
+@media only screen and (max-width: 565px){
+    #displayback {
+        z-index: -4;
+        position: absolute;
+        margin-left: auto;
+        margin-right: auto;
+        top: 30px;
+        left: 0;
+        right: 0;
+    }
+    .bt1 {
+        height: 50px;
+        width: 50px;
+        font-size: 30px;
+        text-align: center;
+        align-content: center;
+        background-color: transparent;
+        border: none;
+        position:relative;
+        right: 10px;
+    }
+    body {
+        background-image: url(http://i67.tinypic.com/1zgb3o6.jpg);
+        background-repeat: no-repeat;
+        text-align: center;
+        background-size: cover;
+    }
+    a.changecolor:link {
+        text-decoration: underline;
+        color: black;
+    }
+}

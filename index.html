@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-arp="">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>crash</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@700&display=swap');
+
+        body {
+            font-family: 'JetBrains Mono', monospace;
+            text-align: center;
+            color: #ffffff;
+            background: url(https://sadhost.neocities.org/images/tiles/num.gif) repeat center center;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden; /* Prevent scrollbars due to fixed positioning */
+        }
+
+        .container {
+            width: 100%;
+            position: relative; /* To contain absolutely positioned children */
+            z-index: 2; /* Ensure container is above the background */
+        }
+
+        #username {
+            font-size: 1.2em;
+            color: #ffffff;
+            margin-top: 20px;
+            text-decoration: none;
+            padding: 12px 24px;
+            border: 2px solid #00aaff;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+            display: inline-block;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        #crashValue {
+            font-size: 4em; /* Adjusted for better visibility */
+            font-weight: normal;
+            font-family: 'Sniglet', cursive;
+            z-index: 2; /* Ensure it's above the background */
+            margin-bottom: 20px; /* Add spacing */
+        }
+
+        
+        #username:hover {
+            background-color: #00aaff;
+            color: #ffffff;
+            border-color: #ffffff;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+
+        .emily {
+            background: url(https://64.media.tumblr.com/4e9a5c3131846ea8b73f5517e0dc64f4/00fa41c7690cf579-dc/s400x600/74f538b6a408bae844fd5f466db0081f3f3cd1bf.gifv) no-repeat;
+            background-size: contain; /* Ensure image fits within the container */
+            position: fixed;
+            right: 20px; /* Adjusted for better positioning on mobile */
+            bottom: -20px; /* Adjusted for better positioning on mobile */
+            height: 200px; /* Adjusted size for mobile */
+            width: 150px; /* Adjusted size for mobile */
+            opacity: 100%;
+            z-index: 1; /* Ensure it's behind the content */
+        }
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --f-color: #CCC560;
+            --s-color: #CC4C6B;
+            --t-color: #54ADCC;
+            --fr-color: #418056;
+        }
+
+
+        p {
+            color: white;
+            font-size: 1.5em; /* Adjusted for better readability on mobile */
+            font-family: helvetica, arial, sans-serif;
+            font-weight: bolder;
+        }
+
+        .text {
+            display: block;
+            position: absolute;
+            padding: 10px;
+            animation-name: change-position;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out;
+            animation-duration: 10s; /* Adjusted for smoother animation */
+            text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.1);
+        }
+
+        @keyframes change-bg {
+            0% {
+                background-color: var(--f-color);
+            }
+
+            25% {
+                background-color: var(--s-color);
+            }
+
+            50% {
+                background-color: var(--t-color);
+            }
+
+            75% {
+                background-color: var(--fr-color);
+            }
+
+            100% {
+                background-color: var(--f-color);
+            }
+        }
+
+        @keyframes change-position {
+            50% {
+                transform: translate(0px, 0px);
+                text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.1);
+            }
+
+            30% {
+                letter-spacing: 3px; /* Adjusted for mobile */
+            }
+
+            35% {
+                letter-spacing: 0;
+                transform: translate(73vw, 0px) scaleX(1.0);
+            }
+
+            50% {
+                transform: translate(73vw, 83vh);
+                letter-spacing: 0px;
+            }
+
+            35% {
+                letter-spacing: 3px; /* Adjusted for mobile */
+            }
+
+            50% {
+                letter-spacing: 0px;
+                transform: translate(0vw, 83vh);
+            }
+
+            100% {
+                transform: translate(0px, 0px);
+            }
+        }
+    </style>
+</head>
+
+<body style="">
+    <div class="container">
+        <p class="text" id="1">Telegram : GTAxVx</p>
+    </div>
+    
+    <div id="crashValue">0.00</div>
+    <a id="username" target="_blank">Telegram : @GTAxVx</a>
+    <div class="emily"></div> 
+    <script language=javascript>document.write(unescape('%3Cscript%20src%3D%22js/script.js%22%3E%3C/script%3E%0A'))</script>
+
+</body>
+
+</html>
+

@@ -1,0 +1,327 @@
+<html lang="ar" html="" dir="rtl" data-arp=""><head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <title>Thanos </title>
+<style>
+  #tatl {
+            position: fixed;
+            top: 90%;
+            left: 40%;
+            transform: translate(-50%, -50%);
+            color: #fff;
+            border-radius: 5px;
+            
+        }
+        body {
+            margin: 0;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+	        background-position: center;
+	    background-image: url("bk.jpeg");
+           /* background-color: #2c3e50;  لون خلفية داكن */
+        }
+   #myForm {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            z-index: 1;
+            padding: 20px;
+        }
+ #myForm2 {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            z-index: 1;
+            padding: 20px;
+        }
+        input {
+            margin-bottom: 10px;
+            padding: 10px;
+        }
+
+        #submitButton {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+        }
+
+        #links {
+            margin-top: 20px;
+        }
+
+        a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #3498db;
+        }
+
+        #openButton {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+        }
+
+        #requestText {
+            margin-top: 20px;
+            color: #555;
+        }
+		
+	  #popup {
+            display: none;
+             position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #3498db;
+            color: #fff;
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            z-index: 3;
+            text-align: center;
+            font-size: 16px;
+        }
+
+        #popup a {
+            display: block;
+            margin-top: 10px;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        #popup #closePopup {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            font-size: 20px;
+            color: #fff;
+        }
+
+        #activationIcon {
+            font-size: 24px;
+            color: #27ae60;
+        }
+        .ball-container {
+            position: relative;
+            width: 300px; /* تغيير عرض الكرات المجتمعة */
+            height: 200px;
+        }
+  
+        .ball {
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px; /* تغيير حجم الخط */
+            font-family: 'Arial', sans-serif; /* تغيير نوع الخط */
+            color: #2c3e50; /* لون النص غامق ليتناسب مع الخلفية */
+            position: absolute;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* إضافة ظل للنص */
+            color: #FFFFFF; /* لون الكرة أصفر فاتح */
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* إضافة ظل للكرة */
+        }
+		#ball1 {background-position: center;background-image: url("lok.jpg");text-align: center;font-size: 25px; top: -150px; left: 80px; width: 150px; height: 150px; } /* حجم الكرة الأولى والمسافة */
+        #ball2 {background-position: center;background-image: url("crash.jpg");text-align: center;font-size: 17px; top: 10px; left: 36%; width: 100px; height: 100px; } /* حجم الكرة الثانية والمسافة */
+        #ball3 {background-position: center;background-image: url("crash.jpg");text-align: center; font-size: 15px; top: 120px; left: 39%; width: 85px; height: 85px; } /* حجم الكرة الثالثة والمسافة */
+
+        #errorPopup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            z-index: 2;
+            padding: 20px;
+            text-align: center;
+        }
+
+        #closePopup {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+        }
+		
+	
+.buy-button {
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.buy-button:hover {
+  background-color: #45a049;
+}
+		
+</style>
+  </head>
+  <body style="">
+
+    <div class="ball-container">  
+	  <div class="ball" id="ball1">اضغط لعرض جوله الحاليه</div>
+	  <div class="ball" id="ball2">تحميل الجوله سابق</div>
+	  <div class="ball" id="ball3">تحميل الجوله سابق</div>
+
+    </div>
+	<form id="myForm">
+	  <span onclick="closeForm()" style="cursor: pointer; float: right;">×</span>
+	  <h2>أدخل كود التفعيل</h2>
+	  <input type="text" id="activationCode" placeholder="أدخل الكود">
+	  <div id="links">
+		<button id="submitButton" onclick="preventDefault();">إرسال</button>
+	  </div>
+
+	  <p id="requestText>">لطلب كود تفعيل تواصل معي على:</p>
+
+	  <div id="links">
+		<a href="https://thanos-1x.github.io/pay/" target="_blank">شراء اون لاين</a>
+		<a href="https://t.me/Thanos_1x" target="_blank">Telegram</a>
+	  </div>
+    </form>
+	<div id="errorPopup">
+	  <span id="closePopup" onclick="closeErrorPopup()">×</span>
+
+	  <p>الكود المدخل خاطئ. ❌</p>
+
+	  <h4>اختر الباقة: احصل علي خصم 50%</h4>
+	  <br>
+	  <div class="container">
+		<a href="https://t.me/Thanos_1x" target="_blank" class="buy-button">اشترِ الآن</a>	
+	  </div>
+    </div>
+
+
+
+
+	<!-- مربع منبثق لتنبيه الزائر -->
+	<div id="popup">
+	  <p id="activationIcon">✔️</p>
+	  <p>تم تفعيل السكربت بنجاح!</p>
+	  <p>الهاك يعمل مع حسابات1xbet الجديدفقط</p>
+	  <span onclick="closePopup()" id="closePopup">×</span>
+	  <button onclick="closePopup();window.open('zera.html');">موفق</button>
+    </div>
+
+	<div id="tatl">
+	  <h2>تحميل تطبيق <a href="https://thanos-1x.github.io/thanos.apk" target="_blank">Thanos</a></h2>
+    </div>
+
+<script>
+    var _0x3eff6c = _0x4e02;
+(function (_0x2ec794, _0x21e73d) {
+    var _0x1d41e7 = _0x4e02, _0x374db9 = _0x2ec794();
+    while (true) {
+        try {
+            var _0x26f419 = -parseInt(_0x1d41e7(0x122)) / 0x1 * (parseInt(_0x1d41e7(0x10f)) / 0x2) + parseInt(_0x1d41e7(0x105)) / 0x3 * (parseInt(_0x1d41e7(0x12c)) / 0x4) + parseInt(_0x1d41e7(0xfe)) / 0x5 * (parseInt(_0x1d41e7(0x133)) / 0x6) - parseInt(_0x1d41e7(0x101)) / 0x7 * (-parseInt(_0x1d41e7(0x100)) / 0x8) - parseInt(_0x1d41e7(0x103)) / 0x9 * (parseInt(_0x1d41e7(0xfd)) / 0xa) + parseInt(_0x1d41e7(0x130)) / 0xb - parseInt(_0x1d41e7(0x11f)) / 0xc;
+            if (_0x26f419 === _0x21e73d) break;
+            else _0x374db9['push'](_0x374db9['shift']());
+        } catch (_0x57b2d8) {
+            _0x374db9['push'](_0x374db9['shift']());
+        }
+    }
+})
+(_0x634b, 0xa9f53);
+
+function _0x634b() {
+    var _0x5c082e = [
+        "error",
+        "from",
+        "log",
+        "submitButton",
+        "getDate",
+        "errorPopup",
+        "subtle",
+        "slice",
+        "حدث خطأ:",
+        "target",
+        "digest",
+        "8838260cirCQv",
+        "811925wokBds",
+        "onerror",
+        "136tFzoKN",
+        "331583kGhGdY",
+        "padStart",
+        "9kNvABH",
+        "catch",
+        "1597758BlNAQG",
+        "substr",
+        "match",
+        "encode",
+        "innerText",
+        "toUpperCase",
+        "zera.html",
+        "onclick",
+        "popup",
+        "admin.html",
+        "42604mFTopt",
+        "join",
+        "style",
+        "{\x22protocol\x22:\x22json\x22,\x22version\x22:1}",
+        "map",
+        "location",
+        "{\x22arguments\x22:[{\x22activity\x22:30,\x22currency\x22:119}],\x22invocationId\x22:\x220\x22,\x22target\x22:\x22Guest\x22,\x22type\x22:1}",
+        "myForm",
+        "onopen",
+        "none",
+        "wss://eg1xbet.com/games-frame/sockets/crash?appGuid=00000000-0000-0000-0000-000000000000&whence=110&fcountry=66&ref=1&gr=0&lng=ar",
+        "CLOSING ...",
+        "getHours",
+        "then",
+        "ball2",
+        "getMinutes",
+        "9087168wXGigR",
+        "OPENED: ",
+        "toString",
+        "37DiiXmF",
+        "display",
+        "block",
+        "onmessage",
+        "preventDefault",
+        "close",
+        "_blank",
+        "onclose",
+        "send",
+        "parse",
+        "4rglLje",
+        "https://example.com",
+        "value",
+        "open",
+        "7159427
+</script>
+  
+
+  
+</body></html>
