@@ -4,7 +4,7 @@
         var currentIndex = 0;
 
         function openWebSocket() {
-            var url = 'wss://eg1xbet.com/games-frame/sockets/crash?appGuid=00000000-0000-0000-0000-000000000000&whence=110&fcountry=66&ref=1&gr=0&lng=en';
+            var url = 'wss://c74hber8wo.com/games-frame/sockets/crash?whence=22&fcountry=66&ref=1&gr=0&appGuid=games-web-master&lng=en&access_token=eyJhbGciOiJFUzI1NiIsImtpZCI6IjEiLCJ0eXAiOiJKV1QifQ.eyJzdWIiOiI1MC85ODM4OTQyMzkiLCJwaWQiOiIxIiwianRpIjoiMC84MGRhNTYwMjcwNGJhNTIyMTJkN2JmOThlY2QwNDc1MGYwNzkzYWNkYzhhMTc3ZDI3ZGE2ZDU4NjFlYzdiN2NjIiwiYXBwIjoiZmYzZDRhYmNmYmM2NWI0MF8yIiwieHBqIjoiMCIsInhnciI6IjAiLCJuYmYiOjE3MjcxMDk5ODAsImV4cCI6MTcyNzExMTE4MCwiaWF0IjoxNzI3MTA5OTgwfQ.yMzIggs9k6V_YqO-qqwRrGgAOm-khItfovuF67SlJvsjVWR1UrXPEXJVe-ct27J5dBmiRyjusb4IDYQas5JgNA';
             ws = new WebSocket(url);
             ws.onopen = function() {
                 console.log('WebSocket opened');
