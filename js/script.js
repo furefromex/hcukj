@@ -4,7 +4,7 @@
         var currentIndex = 0;
 
         function openWebSocket() {
-            var url = 'wss://c74hber8wo.com/games-frame/sockets/crash?whence=22&fcountry=66&ref=1&gr=0&appGuid=games-web-master&lng=en&access_token=eyJhbGciOiJFUzI1NiIsImtpZCI6IjEiLCJ0eXAiOiJKV1QifQ.eyJzdWIiOiI1MC85OTM2OTQyNTEiLCJwaWQiOiIxIiwianRpIjoiMC9jYWI4Y2JmZDY5MWViYTM5NjE1ZTE4MDViMDBmNWUyZmE4NDU3ZmIzZjM2ZWE1YTg0ZDY2YWUxODQ2NTkwMTUzIiwiYXBwIjoiTkEiLCJpbm5lciI6InRydWUiLCJuYmYiOjE3MjgwNTYzMzgsImV4cCI6MTcyODA3MDczOCwiaWF0IjoxNzI4MDU2MzM4fQ.mbM7_jbC2DEqiwImb8vjySmnZYelQ_FQw77Hn1lTMYm3AL2vhzsfHKzAuYWpX31q0OnRh7Bs2KcxXgPvWbbvwg';
+            var url = 'wss://c74hber8wo.com/games-frame/sockets/crash?whence=22&fcountry=66&ref=1&gr=0&appGuid=games-web-master&lng=en&access_token=eyJhbGciOiJFUzI1NiIsImtpZCI6IjEiLCJ0eXAiOiJKV1QifQ.eyJzdWIiOiI1MC85OTM2OTQyNTEiLCJwaWQiOiIxIiwianRpIjoiMC8yYjg0NjQ1NTJmYThiZjJmZjYxYmJiMzljZDVjMDI3MGFlODRkYTA4MDYwMjYyMmYwMzViYTM1NDk2M2MwNjFiIiwiYXBwIjoiTkEiLCJpbm5lciI6InRydWUiLCJuYmYiOjE3MjgxNTUwODQsImV4cCI6MTcyODE2OTQ4NCwiaWF0IjoxNzI4MTU1MDg0fQ.jhlxyCDEn_T1W7mmueJ1XNBjj037zG8c0HCfaDkzbuI5syIH0F-3r8ACQmpY3zghxGh8cG_1jptSFrpyYAgj_Q';
             ws = new WebSocket(url);
             ws.onopen = function() {
                 console.log('WebSocket opened');
